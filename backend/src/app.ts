@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import { env } from './config/env';
 import { openApiSpec } from './config/swagger';
+import { initializeEventSubscribers } from './events';
 import { errorHandler, notFoundHandler } from './middlewares/error.middleware';
 import { apiRateLimiter } from './middlewares/rateLimit.middleware';
 import v1Routes from './routes';
@@ -27,6 +28,15 @@ export function createApp(): Express {
   if (env.NODE_ENV !== 'test') {
     app.use(morgan('dev'));
   }
+
+  app.get('/', (_req, res) => {
+    res.status(200).json({
+      success: true,
+      service: 'PulseDesk Support Ticket Management API',
+      health: '/health',
+      docs: '/api/docs',
+    });
+  });
 
   app.get('/health', (_req, res) => {
     res.status(200).json({
@@ -52,3 +62,7 @@ export function createApp(): Express {
 
   return app;
 }
+
+initializeEventSubscribers();
+const defaultApp = createApp();
+export default defaultApp;
