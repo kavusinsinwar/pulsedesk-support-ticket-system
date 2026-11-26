@@ -84,7 +84,10 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!user) return;
     loadNotifications();
-  }, [user, loadNotifications]);
+    if (connected) return;
+    const timer = setInterval(loadNotifications, 20000);
+    return () => clearInterval(timer);
+  }, [user, connected, loadNotifications]);
 
   // Global Cmd+K or / shortcut for Command Palette
   useEffect(() => {

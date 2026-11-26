@@ -59,7 +59,8 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
       auth: { token },
       transports: ['websocket', 'polling'],
       reconnection: true,
-      reconnectionDelay: 1500,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 2000,
     });
 
     client.on('connect', () => setConnected(true));
