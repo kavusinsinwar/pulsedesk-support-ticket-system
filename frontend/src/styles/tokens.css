@@ -1,0 +1,189 @@
+:root {
+  /* Fonts */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Brand */
+  --color-brand: #0C66E4;
+  --color-brand-hover: #0055CC;
+  --color-brand-pressed: #09326C;
+  --color-brand-subtle: #E9F2FF;
+  --color-brand-subtle-hover: #CCE0FF;
+
+  /* Text */
+  --text: #172B4D;
+  --text-subtle: #44546F;
+  --text-subtlest: #626F86;
+  --text-disabled: #8590A2;
+  --text-inverse: #FFFFFF;
+  --text-link: #0C66E4;
+  --text-danger: #AE2E24;
+  --text-success: #216E4E;
+  --text-warning: #7F5F01;
+
+  /* Surfaces */
+  --bg: #FFFFFF;
+  --bg-sunken: #F7F8F9;
+  --bg-column: #F1F2F4;
+  --bg-hover: #F1F2F4;
+  --bg-pressed: #DCDFE4;
+  --bg-overlay: #FFFFFF;
+  --bg-blanket: rgba(9, 30, 66, 0.54);
+  --bg-wip-exceeded: #FFF1D6;
+  --bg-flagged: #FFF7D6;
+
+  /* Borders */
+  --border: #DCDFE4;
+  --border-strong: #B3B9C4;
+  --border-focus: #388BFF;
+  --border-danger: #E2483D;
+
+  /* Lozenges */
+  --lozenge-neutral-bg: #DCDFE4;
+  --lozenge-neutral-fg: #44546F;
+  --lozenge-blue-bg: #CCE0FF;
+  --lozenge-blue-fg: #0055CC;
+  --lozenge-green-bg: #BAF3DB;
+  --lozenge-green-fg: #216E4E;
+  --lozenge-red-bg: #FFD5D2;
+  --lozenge-red-fg: #AE2E24;
+  --lozenge-yellow-bg: #F8E6A0;
+  --lozenge-yellow-fg: #7F5F01;
+  --lozenge-purple-bg: #DFD8FD;
+  --lozenge-purple-fg: #5E4DB2;
+
+  /* Issue / Ticket Category & Type accents */
+  --type-bug: #E2483D;
+  --type-task: #388BFF;
+  --type-story: #4BCE97;
+  --type-epic: #9F8FEF;
+  --type-subtask: #579DFF;
+
+  /* Priority */
+  --priority-highest: #E2483D;
+  --priority-high: #F87168;
+  --priority-medium: #F5A623;
+  --priority-low: #4C9AFF;
+  --priority-lowest: #7A869A;
+
+  /* Spacing (4px grid) */
+  --space-0: 0;
+  --space-025: 2px;
+  --space-050: 4px;
+  --space-075: 6px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+
+  /* Radii */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Elevation */
+  --shadow-raised: 0 1px 1px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31);
+  --shadow-overlay: 0 8px 12px rgba(9, 30, 66, 0.15), 0 0 1px rgba(9, 30, 66, 0.31);
+  --shadow-drag: 0 12px 24px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31);
+
+  /* Motion */
+  --duration-instant: 80ms;
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-moderate: 250ms;
+  --duration-slow: 350ms;
+
+  --ease-out: cubic-bezier(0.15, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --color-brand: #579DFF;
+  --color-brand-hover: #85B8FF;
+  --color-brand-pressed: #CCE0FF;
+  --color-brand-subtle: #1C2B41;
+  --color-brand-subtle-hover: #09326C;
+
+  --text: #B6C2CF;
+  --text-subtle: #9FADBC;
+  --text-subtlest: #8C9BAB;
+  --text-disabled: #738496;
+  --text-inverse: #1D2125;
+  --text-link: #579DFF;
+  --text-danger: #FD9891;
+  --text-success: #7EE2B8;
+  --text-warning: #F5CD47;
+
+  --bg: #1D2125;
+  --bg-sunken: #161A1D;
+  --bg-column: #101214;
+  --bg-hover: #22272B;
+  --bg-pressed: #2C333A;
+  --bg-overlay: #282E33;
+  --bg-blanket: rgba(0, 0, 0, 0.65);
+  --bg-wip-exceeded: #3D2E00;
+  --bg-flagged: #2E2507;
+
+  --border: #38414A;
+  --border-strong: #596773;
+  --border-focus: #579DFF;
+  --border-danger: #F87168;
+
+  --lozenge-neutral-bg: #2C333A;
+  --lozenge-neutral-fg: #B6C2CF;
+  --lozenge-blue-bg: #1C2B41;
+  --lozenge-blue-fg: #85B8FF;
+  --lozenge-green-bg: #1C3329;
+  --lozenge-green-fg: #7EE2B8;
+  --lozenge-red-bg: #42221F;
+  --lozenge-red-fg: #FD9891;
+  --lozenge-yellow-bg: #3D2E00;
+  --lozenge-yellow-fg: #F5CD47;
+  --lozenge-purple-bg: #2B273F;
+  --lozenge-purple-fg: #B8ACF6;
+
+  --shadow-raised: 0 1px 1px rgba(0, 0, 0, 0.5), 0 0 1px rgba(0, 0, 0, 0.6);
+  --shadow-overlay: 0 8px 16px rgba(0, 0, 0, 0.45), 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-drag: 0 14px 28px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-hover) 25%,
+    var(--bg-pressed) 50%,
+    var(--bg-hover) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 1ms;
+    --duration-fast: 100ms;
+    --duration-base: 100ms;
+    --duration-moderate: 100ms;
+    --duration-slow: 100ms;
+  }
+
+  .skeleton-shimmer {
+    animation: none;
+    background: var(--bg-hover);
+  }
+}
