@@ -11,6 +11,7 @@ import v1Routes from './routes';
 
 export function createApp(): Express {
   const app = express();
+  app.set('trust proxy', 1);
   app.set('etag', false);
 
   app.use(helmet());
